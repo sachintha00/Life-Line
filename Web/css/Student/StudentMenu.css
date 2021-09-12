@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    background-color: #fff;
+    /* background-color: #161725; */
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.side-menu{
+    position: fixed;
+    padding: 100px 0;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    /* overflow-y: scroll; */
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 66px;
+    white-space: nowrap;
+    transition: 1s;
+    box-shadow: 5px 5px 10px rgb(0,0,0,.1);
+    z-index: 10;
+}
+
+.side-menu .logo-top{
+    opacity: 0;
+    width: 100px;
+    transition: 1s;
+}
+
+.side-menu .menu-toggle{
+    position: absolute;
+    left: 25%;
+    top: 3%;
+    transition: .5s ease-in;
+    width: 30px;
+    background-color: #273889;
+    border-radius: 20%;
+}
+
+.side-menu .menu-toggle:hover{
+    background-color: #273889;
+    padding: 5px;
+    border-radius: 20%;
+}
+
+.side-menu ul li{
+    margin: 0 12px;
+    transition: 1s ease;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.side-menu .item.list{
+    margin-top: 12px;
+    display: block;
+    padding: 10px 10px;
+    border-radius: 50px;
+    width: 220px;
+    background-color: #273889;
+    opacity: 1;
+    box-shadow: 3px 3px 5px rgb(0,0,0,.2);
+    /* overflow: hidden; */
+}
+
+/* hover effect start */
+
+.side-menu .item.list:hover{
+    transition: .3s ease-in;
+    width: 220px;
+    opacity: .9;
+}
+
+/* .side-menu .item.list.btn::before{
+    content: "";
+    position: absolute;
+    left: 11px;
+    bottom: 188px;
+    width: 220px;
+    height: 0%;
+    background-color: #ffff;
+    border-radius: 50% 50% 0 0;
+    transition: 2s;
+    z-index: 1;
+}
+
+.side-menu .item.list:hover.btn::before{
+    height: 40%;
+} */
+
+/* hover effect end */
+
+.side-menu .item.list span{
+    line-height: 0;
+    font-size: 16px;
+    overflow-x: hidden;
+    opacity: 1;
+}
+
+.side-menu .item.list img{
+    width: 24px;
+}
+
+.side-menu ul li i{
+    padding: 0 18px 0 0;
+    font-size: 25px;
+}
+
+.side-menu ul li span{
+    color: #ffffff;
+    /* color: #B4C7FE; */
+}
+
+.menu-items{
+    position: relative;
+    left: 1vh;
+    top: 35vh;
+}
+
+/* after click start */
+
+/* .menu-active .page-wrapper{
+    transform: translateX(200px);
+} */
+
+.span-active .text,
+.span-active .logo-top{
+    opacity: 1;
+    transition: .5s ease-out;
+}
+
+.menu-active .side-menu{
+    width: 300px;
+}
+
+.toggle-active .side-menu .menu-toggle{
+    right: 5%;
+    transform: translateX(180px) rotate(180deg);
+    /* transform-origin: 0% 40%; */
+    transition: 1s ease-in;
+}
+
+/* after click end */
+
+/***************************************************************************************************************************/
+/***************************************************************************************************************************/
+
+.side-menu #muploaded_image{
+    transition: 1s;
+    position: absolute;
+    top: 12%;
+    left: 15%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: none;
+    box-shadow: 5px 5px 10px rgb(0,0,0,.1);
+}
+
+.side-menu .mProfileContainer .mpro{
+    position: relative;
+    left: -2vh;
+    transition: 1s;
+    min-width: 180px;
+    min-height: 185px;
+    max-width: 180px;
+    max-height: 185px;
+}
+
+.side-menu .logo h1{
+    position: absolute;
+    top: 40%;
+    left: 8vh;
+}

@@ -1,0 +1,301 @@
+.formStyle{
+    position: absolute;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    /* background-color: red; */
+    border-radius: 10px;
+    overflow: hidden; 
+    padding: 30px; 
+    transition: 2s;
+    z-index: 1;
+}
+
+#FormStyleteach{
+    transform: scale(0);
+}
+
+#form1{
+    position: absolute;
+    top: 3vh;
+    left: 0vh;
+    transition: 1.6s;
+} 
+
+#form2{
+    position: relative;
+    top: 7.5vh;
+    left: 110vh;
+    transition: 2s;
+} 
+
+#form3{
+    position: relative;
+    bottom: 100vh;
+    left: 110vh;
+    transition: 2s;
+}
+
+#form3 .guardian-box .blockcls{
+    margin: 0 1.2vh 0 0;
+}
+
+#form3 .guardian-box .relation{
+    position: relative;
+    top: -1.5vh;
+}
+
+#form3 .guardian-box {
+    position: relative;
+    top: 2vh;
+}
+
+.student-register{
+    /* background-color: blue; */
+    transition: 1s;
+    transform: scale(1);
+}
+
+
+.topic h1{
+    margin-top: 30px;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.normal_Topic h3{
+    padding: 2px 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.input-style-form input{
+    border: 1px solid #d5d2d2;
+    border-radius: 5px;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.input-style-form input:focus{
+    border: 1.5px solid #1f52f9;
+}
+
+.name,
+.guardian-name{
+    display: inline-block;
+}
+
+.name input,
+.guardian-name input{
+    width: 170px;
+}
+
+.stgmail input{
+    width: 300px;
+}
+
+.blockcls{
+    display: block;
+    margin: 10px 0 0 10px;
+}
+
+.all-input p{
+    position: relative;
+    top: -2vh;
+    left: 2vh;
+    color: red;
+}
+
+.dtf{
+    position: relative;
+    top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.gender label,
+.gender .select-box{
+    position: relative;
+    top: -2.5vh;
+}
+
+.gender p{
+    position: relative;
+    left: 0.8vh;
+}
+
+.all-input3 p{
+    position: relative;
+    top: -2.5vh;
+    left: 1vh;
+    color: red;
+}
+
+.input-style-form .name label,
+.input-style-form .nic label,
+.input-style-form .city label{
+    position: relative;
+    top: -3.5vh;
+}
+
+.input-style-form .guardian-mobile label,
+.input-style-form .guardian-gmail label,
+.input-style-form .guardian-name label,
+.input-style-form .guardian-nic label{
+    position: relative;
+    left: 10px;
+    top: -3.5vh;
+}
+
+.input-style-form .name input:focus ~ label,
+.input-style-form .nic input:focus ~ label,
+.input-style-form .city input:focus ~ label{
+    top: -6vh;
+    background-color: #ffff;
+}
+
+.input-style-form .guardian-mobile input:focus ~ label,
+.input-style-form .guardian-gmail input:focus ~ label,
+.input-style-form .guardian-name input:focus ~ label,
+.input-style-form .guardian-nic input:focus ~ label{
+    top: -6vh;
+    background-color: #ffff;
+}
+
+.guardian-box .relation{
+    padding: 1vh 0 1vh 0;
+}
+
+.input-style-form .relation p{
+    position: relative;
+    top: .4vh;
+}
+
+#btnNext1,#btnNext2,#btnNext3{
+    position: relative;
+    bottom: -4vh;
+    left: 55vh;
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background-color: #375396;
+    color: white;
+    width: 16vh;
+    border-radius: 6px;
+}
+
+#btnNext3{
+    position: relative;
+    bottom: -.4vh;
+    left: 40vh;  
+}
+
+#btnNext2{
+    position: relative;
+    bottom: -2.5vh;
+}
+
+#btnNext1:hover,#btnNext2:hover,#btnBack1:hover,#btnNext3:hover,#btnBack2:hover{
+    background-color: #3B55CE;
+    cursor: pointer;
+}
+
+#btnBack1,#btnBack2{
+    position: relative;
+    bottom: -2.5vh;
+    right: 31.5vh;
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background-color: #375396;
+    color: white;
+    width: 16vh;
+    border-radius: 6px;
+}
+
+#btnBack2{
+    position: relative;
+    left: 0vh;
+    bottom: -.4vh;
+}
+
+
+.sibling textarea, .StAddress textarea{
+    position: relative;
+    top: -2vh;
+    border: 1px solid #d5d2d2;
+    outline: none;
+    padding: 10px;
+}
+
+.sibling p, .StAddress p{
+    position: relative;
+    left: 1vh;
+}
+
+.sibling, .StAddress{
+    margin: 15px 0 0 10px;
+}
+
+#skipSt{
+    position: relative;
+    left: 20vh;
+    bottom: -2.7vh;
+    border: none;
+    outline: none;
+    padding: 15px 40px;
+    background-color: transparent;
+    color: #3B55CE;
+    width: 16vh;
+    border-radius: 6px;
+}
+
+#skipSt:hover{
+    cursor: pointer;
+}
+
+.sibling label{
+    position: relative;
+}
+
+.trans{
+    transition: 1.3s;
+}
+
+.txtArea-lbl{
+    position: relative;
+    top: -10vh;
+    right: 33vh;
+    transition: .3s;
+}
+
+.input-style-form .StAddress textarea:focus ~ label,
+.input-style-form .sibling textarea:focus ~ label{
+    top: -94px;
+    background-color: #ffff;
+}
+
+
+#stReg1{
+    width: 300px;
+    position: relative;
+    top: -40vh;
+    left: 33vh;
+}
+
+#stReg2{
+    width: 300px;
+    position: relative;
+    top: -48vh;
+    left: 33vh;
+}
+
+#stReg3{
+    width: 300px;
+    position: relative;
+    top: -50vh;
+    left: 33vh;
+}

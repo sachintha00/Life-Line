@@ -1,0 +1,123 @@
+.subjectsEntres .allSub{
+    position: absolute;
+    left: 10%;
+    top: 97%;
+    display: flex;
+    max-width: 85%;
+    height: 39%;
+    overflow-x: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgb(0,0,0,.2);
+}
+
+.subjectsEntres .allSub::-webkit-scrollbar{
+    height: 1.6vh;
+}
+
+.subjectsEntres .allSub::-webkit-scrollbar-track{
+    background-color: rgb(214, 213, 213);
+    border-radius: 10px;
+}
+
+.subjectsEntres .allSub::-webkit-scrollbar-thumb{
+    background-color: #3D5DA8;
+    border-radius: 10px;
+}
+
+.subjectsEntres .StSubjects .sub{
+    position: relative;
+    top: 32%;
+    min-width: 40vh;
+    height: 17vh;
+    margin: 26px 15px 20px 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgb(0,0,0,.2);
+}
+
+.subjectsEntres .StSubjects .Eng{
+    background-color: #273889;
+}
+.subjectsEntres .StSubjects .Sci{
+    background-color: #45AAB4;
+}
+.subjectsEntres .StSubjects .Math{
+    background-color: #038DB2;
+}
+.subjectsEntres .StSubjects .Sinhala{
+    background-color: #206491;
+}
+.subjectsEntres .StSubjects .Religion{
+    background-color: #FBB45C;
+}
+.subjectsEntres .StSubjects .Hist{
+    background-color: #FE7966;
+}
+.subjectsEntres .StSubjects .group1{
+    background-color: #F9637C;
+}
+.subjectsEntres .StSubjects .group2{
+    background-color: #00949D;
+}
+.subjectsEntres .StSubjects .group3{
+    background-color: #646589;
+}
+
+.subjectsEntres .topicAndDescript{
+    position: absolute;
+    top: 15%;
+    left: 7.5%;
+}
+
+.subjectsEntres .StSubjects img{
+    position: relative;
+    left: 68%;
+    bottom: 30%;
+    width: 60px;
+}
+
+.subjectsEntres .StSubjects h1{
+    position: relative;
+    top: 10%;
+    left: 6%;
+    color: #ffff;
+    font-size: 24px;
+}
+
+.subjectsEntres .StSubjects p{
+    position: relative;
+    top: 13%;
+    left: 6%;
+    color: #ffff;
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.subjectsEntres .StSubjects .sub:hover{
+    cursor: pointer;
+    opacity: .7;
+    transition: .5s ease-out;
+}
+
+.subjectsEntres .subjectTopic {
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    z-index: 1;
+}
+
+.subjectsEntres .subjectTopic h1{
+    color: #000000;
+}
+
+.subjectsEntres .subjectTopic p{
+    color: #000000;
+}
+
+.space{
+    position: absolute;
+    top: 130%;
+    height: 100px;
+    width: 50px;
+    background-color: red;
+}

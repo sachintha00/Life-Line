@@ -1,0 +1,673 @@
+.contact-details .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0,0,.7);
+}
+
+#popup1{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: white;
+    width: 400px;
+    min-height: 70vh;
+    padding: 80px,50px,50px;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+}
+
+#popup1 input:focus{
+    outline: none;
+    border: none;
+}
+
+#popup1 .popup-content .btnClose img{
+    position: absolute;
+    right: 0;
+    width: 30px;
+}
+
+#popup1 .popup-content .btnClose img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#popup1 .popup-content{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #popup .popup-content img{
+    max-width: 150px;
+} */
+
+#popup1 .popup-content h1{
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+#popup1 .popup-content p{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 5px 40px;
+}
+
+#popup1 .popup-content 
+.button-box{
+	position: relative;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#popup1 .popup-content 
+.button-box button{
+	background: #3D5DA8;
+    border: none;
+    padding: 12px 70px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 300ms ease;
+}
+
+#popup1 .popup-content 
+.button-box button:hover{
+	background: #5476ea;
+}
+
+#popup1 .popup-content 
+.button-box button:focus{
+	outline: none;
+}
+
+
+.hide{
+    display: none;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    /* transition: 2s; */
+}
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+.contact-details .inner-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 1s ease;
+}
+
+.contact-details .input-group.d-flex{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contact-details .input-box{
+    position: relative;
+    left: 0;
+    margin: 30px 0;
+    width: 100%;
+    padding: 0 6px;
+}
+
+.contact-details .input-box input,.input-box select{
+    width: 100%;
+    border: none;
+    background: #f0f0f7;
+    color: #7b7b7b;
+    padding: 12px;
+    /*padding-left: 42px;*/
+    border-radius: 50px;
+    transition: 500ms ease;
+}
+.contact-details .input-box input::placeholder{
+	color: #7b7b7b;
+}
+.formUpadateValues .input-box input:focus{
+	outline: none;
+    border: none;
+}
+.contact-details .input-box input:focus ~ span.floatingLabel,
+.contact-details .input-box input:valid ~ span.floatingLabel{
+	top: -18px;
+	left: 12px;
+	color: #788385;
+	font-size: 14px;
+}
+.contact-details .input-box span.floatingLabel{
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    top: 10px;
+    color: #8a8a8a;
+    transition: 300ms;
+    pointer-events: none;
+}
+
+.contact-details .button-box{
+	position: relative;
+    left: 5%;
+	padding-top: 3px;
+	text-align: center;
+}
+.contact-details .button-box button{
+	background: #273889;
+    border: none;
+    padding: 10px 34px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 300ms ease;
+}
+
+.contact-details .cDetail img{
+    position: absolute;
+    top: 1%;
+    left: 92%;
+    width: 30px;
+    transform: scale(1);
+    z-index: 998;
+}
+
+.contact-details .cDetail img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.contact-details .inner-box .con-topic{
+    position: relative;
+    top: 5vh;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    color: #93939B;
+    
+}
+
+/********************************************************************************************************************************/
+/********************************************************************************************************************************/
+
+.personal-details .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0,0,.7);
+}
+
+#popup2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: white;
+    width: 700px;
+    min-height: 70vh;
+    padding: 80px 50px 50px;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+}
+
+#popup2 .popup-content .btnClose img{
+    position: absolute;
+    right: 0;
+    width: 30px;
+}
+
+#popup2 .popup-content .btnClose img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#popup2 .popup-content{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #popup .popup-content img{
+    max-width: 150px;
+} */
+
+#popup2 .popup-content h1{
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+#popup2 .popup-content p{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 5px 40px;
+}
+
+#popup2 .popup-content 
+.button-box{
+	position: relative;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#popup2 .popup-content 
+.button-box button{
+	background: #3D5DA8;
+    border: none;
+    padding: 12px 70px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 300ms ease;
+}
+
+#popup2 .popup-content 
+.button-box button:hover{
+	background: #5476ea;
+}
+
+#popup2 .popup-content 
+.button-box button:focus{
+	outline: none;
+}
+
+#popup2 .popup-content .croppie-Frame{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#popup2 .popup-content .crop_image{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3B55CE;
+    color: whitesmoke;
+}
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+.personal-details .input-group.d-flex {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.personal-details .input-box {
+    position: relative;
+    margin: 23px 0;
+    width: 100%;
+    padding: 0 6px;
+}
+
+.personal-details .input-box input,.input-box select{
+    width: 100%;
+    border: none;
+    background: #f0f0f7;
+    color: #7b7b7b;
+    padding: 12px;
+    /*padding-left: 42px;*/
+    border-radius: 50px;
+    transition: 500ms ease;
+}
+.personal-details .input-box input::placeholder{
+	color: #7b7b7b;
+}
+.personal-details .input-box input:focus{
+	outline: none;
+}
+.personal-details .input-box input:focus ~ span.floatingLabel,
+.personal-details .input-box input:valid ~ span.floatingLabel {
+	top: -18px;
+	left: 12px;
+}
+.personal-details .input-box span.floatingLabel {
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    top: 10px;
+    color: #8a8a8a;
+    transition: 300ms;
+    pointer-events: none;
+}
+.personal-details .input-box span.floatLabelleld {
+	position: absolute;
+	top: -50px;
+	left: 12px;
+	font-size: 14px;
+}
+
+.personal-details .ContactDetail .input-box span.floatingLabel {
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    top: 10px;
+    color: #8a8a8a;
+    transition: 300ms;
+    pointer-events: none;
+}
+
+.personal-details .button-box{
+	position: relative;
+    right: 30%;
+	padding-top: 3px;
+	text-align: center;
+}
+.personal-details .button-box button{
+    position: relative;
+    right: -29%;
+	background: #273889;
+    border: none;
+    margin-top: 30px;
+    padding: 10px 34px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 300ms ease;
+}
+
+.personal-details .pDetail img{
+    position: absolute;
+    top: 1%;
+    left: 95%;
+    width: 30px;
+    transform: scale(1);
+}
+.personal-details .pDetail img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.personal-details .inner-box .per-topic{
+    position: relative;
+    top: -2vh;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    color: #93939B;
+    
+}
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+.Authen-details .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: rgba(0, 0,0,.7);
+}
+
+#popup3{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background-color: white;
+    width: 400px;
+    min-height: 70vh;
+    padding: 80px 50px 50px;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+}
+
+#popup3 .popup-content .btnClose img{
+    position: absolute;
+    right: 0;
+    width: 30px;
+}
+
+#popup3 .popup-content .btnClose img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+#popup3 .popup-content{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #popup .popup-content img{
+    max-width: 150px;
+} */
+
+#popup3 .popup-content h1{
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    margin: 20px 0 10px;
+}
+
+#popup3 .popup-content p{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin: 5px 40px;
+}
+
+#popup3 .popup-content 
+.button-box{
+	position: relative;
+	padding-top: 20px;
+	text-align: center;
+}
+
+#popup3 .popup-content 
+.button-box button{
+	background: #3D5DA8;
+    border: none;
+    padding: 12px 70px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 300ms ease;
+}
+
+#popup3 .popup-content 
+.button-box button:hover{
+	background: #5476ea;
+}
+
+#popup3 .popup-content 
+.button-box button:focus{
+	outline: none;
+}
+
+#popup3 .popup-content .croppie-Frame{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#popup3 .popup-content .crop_image{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3B55CE;
+    color: whitesmoke;
+}
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+.Authen-details .input-group.d-flex {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.Authen-details .input-box {
+    position: relative;
+    margin: 35px 0;
+    width: 100%;
+    padding: 0 6px;
+}
+
+.Authen-details .input-box input,.input-box select{
+    width: 100%;
+    border: none;
+    background: #f0f0f7;
+    color: #7b7b7b;
+    padding: 12px;
+    /*padding-left: 42px;*/
+    border-radius: 50px;
+    transition: 500ms ease;
+}
+.Authen-details .input-box input::placeholder{
+	color: #7b7b7b;
+}
+.Authen-details .input-box input:focus{
+	outline: none;
+}
+.Authen-details .input-box input:focus ~ span.floatingLabel,
+.Authen-details .input-box input:valid ~ span.floatingLabel {
+	top: -18px;
+	left: 12px;
+}
+.Authen-details .input-box span.floatingLabel {
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    top: 10px;
+    color: #8a8a8a;
+    transition: 300ms;
+    pointer-events: none;
+}
+.Authen-details .input-box span.floatLabelleld {
+	position: absolute;
+	top: -50px;
+	left: 12px;
+	font-size: 14px;
+}
+
+.Authen-details .ContactDetail .input-box span.floatingLabel {
+    position: absolute;
+    z-index: 1;
+    left: 24px;
+    top: 10px;
+    color: #8a8a8a;
+    transition: 300ms;
+    pointer-events: none;
+}
+
+.Authen-details .button-box{
+	position: relative;
+    right: 30%;
+	padding-top: 3px;
+	text-align: center;
+}
+.Authen-details .button-box button{
+    position: relative;
+    right: -29%;
+	background: #273889;
+    border: none;
+    margin-top: 30px;
+    padding: 10px 34px;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 300ms ease;
+}
+
+.Authen-details .aDetail img{
+    position: absolute;
+    top: 1%;
+    left: 92%;
+    width: 30px;
+    transform: scale(1);
+}
+
+.Authen-details .aDetail img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.Authen-details .inner-box .auth-topic{
+    position: relative;
+    top: -1vh;
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bolder;
+    color: #93939B;
+    
+}
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+.Authen-details .input-box label,
+.personal-details .input-box label,
+.contact-details .input-box label{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    color: red;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    /* max-width: 50px; */
+    float: left;
+}
+
+form#contactForm {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
