@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{679CCFB1-AB94-44E3-A6DC-8D2F580B9DFA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LifeLine</RootNamespace>
+    <AssemblyName>LifeLine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hnet.com-image.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\Dll\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\Dll\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.AxShockwaveFlashObjects.13.0.4000\lib\net40\AxShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Engine.13.0.4000\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonControls.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Prompting.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4000\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportSource.13.0.4000\lib\net40\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Shared.13.0.4000\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Windows.Forms.13.0.4000\lib\net40\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\PcWonderland.com_Guna_UI_Framework_Ultimate_2\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\Dll\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ShockwaveFlashObjects.13.0.4000\lib\net40\ShockwaveFlashObjects.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SMDgetNicDetails, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dll\SMDgetNicDetails.dll</HintPath>
+    </Reference>
+    <Reference Include="SMDLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dll\SMDLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="SMDMessageBox">
+      <HintPath>..\..\..\Dll\SMDMessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="SMDnotify">
+      <HintPath>..\..\..\Dll\SMDnotify.dll</HintPath>
+    </Reference>
+    <Reference Include="SMDRandomPassword">
+      <HintPath>..\..\..\Dll\SMDRandomPassword.dll</HintPath>
+    </Reference>
+    <Reference Include="SMDValidation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Dll\SMDValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\..\Dll\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Academic Staff\frmAcademicStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Academic Staff\frmAcademicStaff.Designer.cs">
+      <DependentUpon>frmAcademicStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Academic Staff\frmAcademicStaffDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Academic Staff\frmAcademicStaffDash.Designer.cs">
+      <DependentUpon>frmAcademicStaffDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Academic Staff\frmAcademicStaffAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Academic Staff\frmAcademicStaffAccounts.Designer.cs">
+      <DependentUpon>frmAcademicStaffAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\AssignmentCount.cs" />
+    <Compile Include="Classes\InsertSubject.cs" />
+    <Compile Include="Classes\Invoice.cs" />
+    <Compile Include="Classes\StudentCountWithGender.cs" />
+    <Compile Include="Classes\StudentRollFind.cs" />
+    <Compile Include="Classes\TeacherRollFind.cs" />
+    <Compile Include="Created Accounts\frmCreateAccAcademicStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Created Accounts\frmCreateAccAcademicStaff.Designer.cs">
+      <DependentUpon>frmCreateAccAcademicStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Created Accounts\frmCreateAccPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Created Accounts\frmCreateAccPrincipal.Designer.cs">
+      <DependentUpon>frmCreateAccPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Created Accounts\frmCreateAccTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Created Accounts\frmCreateAccTeacher.Designer.cs">
+      <DependentUpon>frmCreateAccTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Created Accounts\frmCreateAccStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Created Accounts\frmCreateAccStudent.Designer.cs">
+      <DependentUpon>frmCreateAccStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\DBManager.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QR\frmQRdesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QR\frmQRdesign.Designer.cs">
+      <DependentUpon>frmQRdesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QR\frmQRcamSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QR\frmQRcamSelection.Designer.cs">
+      <DependentUpon>frmQRcamSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QR\frmQRscanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QR\frmQRscanner.Designer.cs">
+      <DependentUpon>frmQRscanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\frmEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\frmEvents.Designer.cs">
+      <DependentUpon>frmEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Main\frmGrade12TO13Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Main\frmGrade12TO13Student.Designer.cs">
+      <DependentUpon>frmGrade12TO13Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Main\frmGrade12TO13StudentSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Main\frmGrade12TO13StudentSubjects.Designer.cs">
+      <DependentUpon>frmGrade12TO13StudentSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Main\frmGrade12TO13StudentDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Main\frmGrade12TO13StudentDash.Designer.cs">
+      <DependentUpon>frmGrade12TO13StudentDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Subjects\frmALselectionSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Subjects\frmALselectionSubject.Designer.cs">
+      <DependentUpon>frmALselectionSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Subjects\frmGrade12TO13SubjectInsideDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Subjects\frmGrade12TO13SubjectInsideDash.Designer.cs">
+      <DependentUpon>frmGrade12TO13SubjectInsideDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Subjects\frmGrade12TO13SubjectInside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 12 to 13\Subjects\frmGrade12TO13SubjectInside.Designer.cs">
+      <DependentUpon>frmGrade12TO13SubjectInside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Main\frmGrade6TO11Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Main\frmGrade6TO11Student.Designer.cs">
+      <DependentUpon>frmGrade6TO11Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Subjects\frmBasketSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Subjects\frmBasketSubject.Designer.cs">
+      <DependentUpon>frmBasketSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Subjects\frmGrade6SubjectInsideDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Subjects\frmGrade6SubjectInside - Copy.Designer.cs">
+      <DependentUpon>frmGrade6SubjectInsideDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Subjects\frmGrade6SubjectInside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Subjects\frmGrade6SubjectInside.Designer.cs">
+      <DependentUpon>frmGrade6SubjectInside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Main\frmGrade6TO11StudentSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Main\frmGrade6TO11StudentSubjects.Designer.cs">
+      <DependentUpon>frmGrade6TO11StudentSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Main\frmGrade6TO11StudentDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\Grade 6 to 11\Main\frmGrade6TO11StudentDash.Designer.cs">
+      <DependentUpon>frmGrade6TO11StudentDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loarding Screen\frmLoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loarding Screen\frmLoard.Designer.cs">
+      <DependentUpon>frmLoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmAccount.Designer.cs">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\frmAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\frmAuthentication.Designer.cs">
+      <DependentUpon>frmAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\NicValidation.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Teachers\Grades\frmGradeInsideDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Grades\frmGradeInsideDash.Designer.cs">
+      <DependentUpon>frmGradeInsideDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\Grades\frmGradeInside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Grades\frmGradeInside.Designer.cs">
+      <DependentUpon>frmGradeInside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\Teacher12To13\frmGrade12TO13Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Teacher12To13\frmGrade12TO13Teacher.Designer.cs">
+      <DependentUpon>frmGrade12TO13Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\Teacher12To13\frmGrade12TO13TeacherDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Teacher12To13\frmGrade12TO13TeacherDash.Designer.cs">
+      <DependentUpon>frmGrade12TO13TeacherDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\Teacher12To13\frmGrade12TO13TeacherGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Teacher12To13\frmGrade12TO13TeacherGrades.Designer.cs">
+      <DependentUpon>frmGrade12TO13TeacherGrades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\Teacher6To11\frmGrade6TO11TeacherDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Teacher6To11\frmGrade6TO11TeacherDash.Designer.cs">
+      <DependentUpon>frmGrade6TO11TeacherDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\Teacher6To11\frmGrade6TO11Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Teacher6To11\frmGrade6TO11Teacher.Designer.cs">
+      <DependentUpon>frmGrade6TO11Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teachers\Teacher6To11\frmGrade6TO11TeacherGrades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teachers\Teacher6To11\frmGrade6TO11TeacherGrades.Designer.cs">
+      <DependentUpon>frmGrade6TO11TeacherGrades.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Academic Staff\frmAcademicStaff.resx">
+      <DependentUpon>frmAcademicStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Academic Staff\frmAcademicStaffDash.resx">
+      <DependentUpon>frmAcademicStaffDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Academic Staff\frmAcademicStaffAccounts.resx">
+      <DependentUpon>frmAcademicStaffAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Created Accounts\frmCreateAccAcademicStaff.resx">
+      <DependentUpon>frmCreateAccAcademicStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Created Accounts\frmCreateAccPrincipal.resx">
+      <DependentUpon>frmCreateAccPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Created Accounts\frmCreateAccTeacher.resx">
+      <DependentUpon>frmCreateAccTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Created Accounts\frmCreateAccStudent.resx">
+      <DependentUpon>frmCreateAccStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QR\frmQRdesign.resx">
+      <DependentUpon>frmQRdesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QR\frmQRcamSelection.resx">
+      <DependentUpon>frmQRcamSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QR\frmQRscanner.resx">
+      <DependentUpon>frmQRscanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\frmEvents.resx">
+      <DependentUpon>frmEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 12 to 13\Main\frmGrade12TO13Student.resx">
+      <DependentUpon>frmGrade12TO13Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 12 to 13\Main\frmGrade12TO13StudentSubjects.resx">
+      <DependentUpon>frmGrade12TO13StudentSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 12 to 13\Main\frmGrade12TO13StudentDash.resx">
+      <DependentUpon>frmGrade12TO13StudentDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 12 to 13\Subjects\frmALselectionSubject.resx">
+      <DependentUpon>frmALselectionSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 12 to 13\Subjects\frmGrade12TO13SubjectInsideDash.resx">
+      <DependentUpon>frmGrade12TO13SubjectInsideDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 12 to 13\Subjects\frmGrade12TO13SubjectInside.resx">
+      <DependentUpon>frmGrade12TO13SubjectInside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 6 to 11\Main\frmGrade6TO11Student.resx">
+      <DependentUpon>frmGrade6TO11Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loarding Screen\frmLoard.resx">
+      <DependentUpon>frmLoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 6 to 11\Subjects\frmBasketSubject.resx">
+      <DependentUpon>frmBasketSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 6 to 11\Subjects\frmGrade6SubjectInside - Copy.resx">
+      <DependentUpon>frmGrade6SubjectInsideDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 6 to 11\Subjects\frmGrade6SubjectInside.resx">
+      <DependentUpon>frmGrade6SubjectInside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 6 to 11\Main\frmGrade6TO11StudentSubjects.resx">
+      <DependentUpon>frmGrade6TO11StudentSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\Grade 6 to 11\Main\frmGrade6TO11StudentDash.resx">
+      <DependentUpon>frmGrade6TO11StudentDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmAccount.resx">
+      <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\frmAuthentication.resx">
+      <DependentUpon>frmAuthentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Grades\frmGradeInsideDash.resx">
+      <DependentUpon>frmGradeInsideDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Grades\frmGradeInside.resx">
+      <DependentUpon>frmGradeInside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Teacher12To13\frmGrade12TO13Teacher.resx">
+      <DependentUpon>frmGrade12TO13Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Teacher12To13\frmGrade12TO13TeacherDash.resx">
+      <DependentUpon>frmGrade12TO13TeacherDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Teacher12To13\frmGrade12TO13TeacherGrades.resx">
+      <DependentUpon>frmGrade12TO13TeacherGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Teacher6To11\frmGrade6TO11TeacherDash.resx">
+      <DependentUpon>frmGrade6TO11TeacherDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Teacher6To11\frmGrade6TO11Teacher.resx">
+      <DependentUpon>frmGrade6TO11Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teachers\Teacher6To11\frmGrade6TO11TeacherGrades.resx">
+      <DependentUpon>frmGrade6TO11TeacherGrades.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_circled_chevron_left_60px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_circled_chevron_left_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_details_popup_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_test_passed_filled_500px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trophy_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_portrait_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backStudent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grade6DashPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grade 6 dash welcome panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attendance 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student Background f.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_settings_3_208px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_settings_208px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_property_96px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_long_arrow_left_208px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_undo_208px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_forward_arrow_208px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_forward_arrow_208px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\principal 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeacherDashPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_480px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_forward_arrow_208px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_undo_208px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_settings_208px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_undo_208px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_forward_arrow_208px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_forward_arrow_208px4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_undo_208px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo name1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_details_popup_480px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_test_passed_filled_500px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trophy_480px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_portrait_480px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_details_popup_480px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_test_passed_filled_500px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_trophy_480px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_portrait_480px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_208px_12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grd6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grd7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grd8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grd9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grd10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grd11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="attendance %28online-audio-converter.com%29.wav" />
+    <Content Include="hnet.com-image.ico" />
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,10 @@
+.chartUsingDownload{
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    width: 455px;
+    height: 343px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px rgb(0,0,0,.2);
+}

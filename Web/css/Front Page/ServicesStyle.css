@@ -1,0 +1,43 @@
+.services .heading{
+    text-align: center;
+    padding:1rem;
+}
+
+.services .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services .box-container .box{
+    background:#fff;
+    border:.1rem solid rgba(0,0,0,.1);
+    padding:2rem;
+    margin:2rem;
+    width:34rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    text-align: center;
+}
+
+.services .box-container .box img{
+    height: 17rem;
+    width:17rem;
+}
+
+.services .box-container .box h3{
+    font-size: 2.5rem;
+    color:#666;
+    padding:1rem 0;
+}
+
+.services .box-container .box p{
+    font-size: 1.4rem;
+    color:#999;
+    padding:.5rem;
+}
+
+.services .box-container .box:hover{
+    transform:translateY(-1rem);
+}
