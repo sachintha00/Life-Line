@@ -1,0 +1,103 @@
+<?php 
+require_once('../php/Connection.php');
+require_once('../php/logic.php');
+?>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2]
+        //   ['Commute',  2],
+        //   ['Watch TV', 2],
+        //   ['Sleep',    7]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          pieHole: 0.4,
+          slices: {
+            0: { color: 'green' },
+            1: { color: 'blue' }
+            // 2: { color: 'black' },
+            // 3: { color: 'yellow' }
+          }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="donutchart" style="width: 900px; height: 500px; background-color: red;"></div>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+        ['Galaxy', 'Distance', 'Brightness'],
+          ['a', 10, 20],
+          ['b', 40, 10],
+          ['c', 20, 5],
+          ['d', 80,75],
+          ['e', 43, 38]
+        ]);
+
+        var options = {
+          title: 'Chess opening moves',
+          width: 500,
+          height: 400,
+          series: {
+            0: { axis: 'distance' }, // Bind series 0 to an axis named 'distance'.
+            1: { axis: 'brightness' } // Bind series 1 to an axis named 'brightness'.
+          },
+          colors: ['#7570b3','red'],
+          legend: { position: 'none' },
+          chart: { title: 'Chess opening moves',
+                   subtitle: 'popularity by percentage' },
+          bars: 'Vertical', // Required for Material Bar Charts.
+          axes: {
+            x: {
+              0: { side: 'Percentage', label: 'Percentage'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        chart.draw(data, options);
+      };
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="top_x_div" style="width: 500px; height: 500px;"></div>
+</body>
+</html>
