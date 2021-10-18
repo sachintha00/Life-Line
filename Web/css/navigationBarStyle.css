@@ -1,0 +1,126 @@
+header{
+    position: fixed;
+    width: 100%;
+    max-height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    z-index: 3;
+    background-color: #ffffff;
+}
+
+.navigation .nav-bar nav{
+    float: right;
+}
+
+.navigation .logo{
+    float: left;
+}
+
+li,a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #094C9B;
+}
+
+.nav-panel{
+    list-style: none;
+    float: left;
+}
+
+.nav-panel li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.nav-panel li a{
+    position: relative;
+    top: 3.4vh;
+    transition: all 0.4s ease-in;
+}
+
+.nav-panel li a:hover{
+    /* background-color: #273889; */
+    color: #ffff;
+    /* padding: 10px 15px; */
+    border-radius: 10px;
+}
+
+.nav-bar li{
+    display: inline-block;
+    font-size: 10px
+}
+
+.nav-bar li img{
+    position: relative;
+    right: 10vh;
+    top: 0;
+    width: 105px;
+}
+
+.nav-bar li h1{
+    position: absolute;
+    top: 3.4vh;
+    left: 23vh;
+}
+
+/*************************************************************************************************************************************/
+/*************************************************************************************************************************************/
+
+.menu{
+    position: absolute;
+    top: 8vh;
+    left: 165vh;
+    z-index: 1000;
+    background-color: #ffff;
+    box-shadow: 5px 5px 10px rgb(0,0,0,.1);
+    border-radius: 16px;
+    visibility: hidden;
+    opacity: 0;
+    /* transition: 4s ease; */
+}
+
+
+.profile-Container{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.menu ul li{
+    padding: 15px 10px;
+    border: 1px solid rgb(0,0,0,.05);
+    z-index: 10000;
+}
+
+.menu ul li a{
+    color: #555;
+}
+
+.menu ul li a:hover{
+    color: #273889;
+}
+
+.arrow.active,
+.menu.active{
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+}
+
+.menu ul li img{
+    margin: 0 10px;
+    max-width: 17px;
+}
+
+.menu h3{
+    margin: 30px 30px 5px 30px;
+    text-align: center;
+    display: flex;
+}
+
+.menu p{
+    margin: 6px 20px 20px 20px;
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+html{
+    /* font-size: 62.5%; */
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: rgb(214, 213, 213);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #273889;
+}
